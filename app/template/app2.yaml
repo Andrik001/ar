@@ -1,12 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: test-argo5
+  name: test-argo4
   namespace: argocd
 spec:
   destination:
     name: cluster2
-    namespace: test-argo5
+    namespace: test-argo4
   project: default
   source:
     path: helm-guestbook
