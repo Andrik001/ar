@@ -1,12 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ns-c2
+  name: root-app
   namespace: argocd
 spec:
   destination:
     name: c2
-    namespace: ns-c2
+    namespace: root-app
   project: default
   source:
     path: helm-guestbook
