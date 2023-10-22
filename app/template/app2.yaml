@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    name: cluster2
+    name: in-cluster
     namespace: test1
   project: default
   source:
