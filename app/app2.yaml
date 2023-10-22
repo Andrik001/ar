@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    name: c2
+    name: in-cluster
     namespace: nginx
   project: default
   source:
