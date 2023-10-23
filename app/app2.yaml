@@ -10,5 +10,5 @@ spec:
     targetRevision: HEAD
     path: guestbook
   destination:
-    server: https://kubernetes.default.svc
+    name: in-cluster
     namespace: guestbook
