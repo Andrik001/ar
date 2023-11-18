@@ -1,6 +1,7 @@
 exports:
-  service:
-    enabled: true
-    type: NodePort
-    port: 88
-    targetPort: 3000
+  svc:
+    service:
+      enabled: true
+      type: NodePort
+      port: 88
+      targetPort: 3000
