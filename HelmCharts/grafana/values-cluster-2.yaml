@@ -7,5 +7,4 @@ grafana:
 
 subchart2:
   enabled: true
-subchart1:
-  enabled: false
+
