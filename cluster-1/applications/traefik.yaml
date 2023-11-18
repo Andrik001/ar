@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: traefik
+  name: traefik-cluster-1
   namespace: argocd
 spec:
   project: default
@@ -14,3 +14,4 @@ spec:
         - values-cluster-1.yaml
   destination:
     name: cluster-1
+    namespace: traefik
