@@ -1,12 +1,11 @@
 grafana:
   enabled: true
-  tags:
-    cluster1: true
-    cluster2: false
   service:
     enabled: true
     type: NodePort
     port: 88
     targetPort: 3000
-
+tags:
+  cluster1: true
+  cluster2: false
 
