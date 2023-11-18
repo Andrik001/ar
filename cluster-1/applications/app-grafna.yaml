@@ -15,3 +15,7 @@ spec:
   destination:
     name: cluster-1
     namespace: grafana
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true
