@@ -30,7 +30,7 @@ traefik-cluster-2:
   logs:
     access:
       enabled: true
-  hostNetwork: true
+  hostNetwork: false
   # image:
   #   name: andreydockerhub/app
   #   tag: traefik_2.9.4
