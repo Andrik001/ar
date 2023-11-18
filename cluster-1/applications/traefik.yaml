@@ -11,11 +11,11 @@ spec:
     targetRevision: HEAD
     helm:
       valueFiles:
-        - values.yaml
+        - values-cluster-1.yaml
   destination:
     name: cluster-1
     namespace: traefik
-  syncPolicy:
-    automated: {}
-    syncOptions:
-      - CreateNamespace=true
+  # syncPolicy:
+  #   automated: {}
+  #   syncOptions:
+  #     - CreateNamespace=true
