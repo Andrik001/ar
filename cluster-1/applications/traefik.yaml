@@ -11,7 +11,7 @@ spec:
     targetRevision: HEAD
     helm:
       valueFiles:
-        - values-cluster-1.yaml
+        - values.yaml
   destination:
     name: cluster-1
     namespace: traefik
