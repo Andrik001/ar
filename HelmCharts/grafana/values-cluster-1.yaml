@@ -5,7 +5,7 @@ grafana:
     port: 88
     targetPort: 3000
 
-  subchart1:
-    enabled: true
-  tags:
-    cluster-1: true 
+subchart1:
+  enabled: true
+tags:
+  cluster-1: true 
