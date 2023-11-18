@@ -5,4 +5,7 @@ grafana:
     type: NodePort
     port: 88
     targetPort: 3000
+cluster1:
+  grafana:
+    enabled: true
 

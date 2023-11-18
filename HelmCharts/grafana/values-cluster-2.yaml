@@ -6,4 +6,5 @@ grafana:
     port: 90
     targetPort: 3000
 cluster1:
-  enabled: true
+  grafana:
+    enabled: true
