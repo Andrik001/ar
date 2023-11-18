@@ -7,5 +7,5 @@ grafana:
 
 subchart1:
   enabled: true
-tags:
-  cluster-1: true 
+subchart2:
+  enabled: false
