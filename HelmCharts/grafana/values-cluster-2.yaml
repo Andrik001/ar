@@ -1,7 +1,7 @@
 tags:
   cluster-2: true
   cluster-1: false
-grafana:
+grafana2:
   # enabled: true
   service:
     enabled: true
