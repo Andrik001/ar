@@ -12,8 +12,12 @@ dependencies:
 - name: grafana
   version: 7.0.6
   repository: https://grafana.github.io/helm-charts
-  condition: subchart1.enabled
+  condition: grafana.enabled
+  tags:
+    - cluster-1
 - name: grafana
   version: 6.61.2
-  condition: subchart2.enabled
   repository: https://grafana.github.io/helm-charts
+  condition: grafana.enabled
+  tags:
+    - cluster-2

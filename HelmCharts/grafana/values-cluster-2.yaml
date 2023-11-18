@@ -1,6 +1,8 @@
-subchart2:
-  enabled: true
 grafana:
+  enabled: true
+  tags:
+    cluster-1: false
+    cluster-2: true
   service:
     enabled: true
     type: NodePort
