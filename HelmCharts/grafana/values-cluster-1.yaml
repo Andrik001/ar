@@ -8,6 +8,6 @@ grafana:
 cluster1:
   grafana:
     enabled: true
-cluster-2:
+cluster2:
   grafana:
     enabled: false
