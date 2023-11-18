@@ -1,5 +1,5 @@
 grafana:
-  # enabled: true
+  enabled: false
   # tags:
   #   cluster-1: true
   #   cluster-2: false
