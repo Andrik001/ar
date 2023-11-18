@@ -4,3 +4,6 @@ grafana:
     type: NodePort
     port: 88
     targetPort: 3000
+tags:
+  cluster-1: true
+  cluster-2: false

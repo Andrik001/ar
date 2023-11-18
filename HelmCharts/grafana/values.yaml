@@ -4,4 +4,3 @@ grafana:
     type: NodePort
     port: 88
     targetPort: 3000
-  version: 7.0.6
