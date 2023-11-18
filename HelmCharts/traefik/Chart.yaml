@@ -30,7 +30,7 @@ dependencies:
   tags:
     - cluster-1
 - name: traefik
-  version: 22.3.0
+  version: 18.3.0
   repository: https://traefik.github.io/charts
   alias: traefik-cluster-2
   tags:
