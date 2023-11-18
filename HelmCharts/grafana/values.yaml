@@ -1,4 +1,4 @@
-exports:
+myimports:
   service:
     enabled: true
     type: NodePort
