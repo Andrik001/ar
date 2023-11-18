@@ -1,5 +1,4 @@
 tags:
-  cluster-2: false
   cluster-1: true
 grafana:
   # enabled: true
