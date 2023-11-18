@@ -10,5 +10,5 @@ spec:
     targetRevision: HEAD
     path: guestbook
   destination:
-    name: in-cluster
+    name: cluster-1
     namespace: guestbook
