@@ -1,7 +1,7 @@
 grafana:
   enabled: true
   tags:
-    cluster-2: true
+    cluster2: true
   #   cluster-2: true
   service:
     enabled: true
