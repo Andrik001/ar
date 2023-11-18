@@ -4,6 +4,6 @@ grafana:
     type: NodePort
     port: 88
     targetPort: 3000
-
-  subchart1:
-    enabled: true
+  grafana:
+    subchart1:
+      enabled: true

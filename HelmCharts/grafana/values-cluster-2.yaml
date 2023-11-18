@@ -4,7 +4,7 @@ grafana:
     type: NodePort
     port: 90
     targetPort: 3000
-
-  subchart2:
-    enabled: true
+  grafana:
+    subchart2:
+      enabled: true
 
