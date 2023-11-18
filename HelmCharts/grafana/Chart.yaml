@@ -14,7 +14,7 @@ dependencies:
   repository: https://grafana.github.io/helm-charts
   tags:
     - cluster-1
-- name: grafana
+- name: grafana1
   version: 6.61.2
   repository: https://grafana.github.io/helm-charts
   tags:
