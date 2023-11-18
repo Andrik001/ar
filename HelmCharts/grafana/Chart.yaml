@@ -14,10 +14,10 @@ dependencies:
   repository: https://grafana.github.io/helm-charts
   condition: grafana.enabled
   tags:
-    - grafana.cluster1
+    - cluster1
 - name: grafana
   version: 6.61.2
   repository: https://grafana.github.io/helm-charts
   condition: grafana.enabled
   tags:
-    - grafana.cluster2
+    - cluster2

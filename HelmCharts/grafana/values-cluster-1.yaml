@@ -2,6 +2,7 @@ grafana:
   enabled: true
   tags:
     cluster1: true
+    cluster2: false
   service:
     enabled: true
     type: NodePort
