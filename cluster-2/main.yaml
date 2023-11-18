@@ -11,8 +11,8 @@ spec:
   source:
     path: cluster-2/applications
     repoURL: git@github.com:Andrik001/ar.git
-    # targetRevision: bra
-  # syncPolicy:
-  #   automated: {}
-  #   syncOptions:
-  #     - CreateNamespace=true
+    targetRevision: HEAD
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true
