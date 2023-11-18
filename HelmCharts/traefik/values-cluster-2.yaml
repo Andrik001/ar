@@ -7,7 +7,7 @@ traefik-cluster-2:
   deployment:
     kind: DaemonSet
   service:
-    type: ClusterIP
+    type: NodePort
   ports:
     web:
       port: 80
