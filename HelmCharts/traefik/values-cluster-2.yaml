@@ -11,15 +11,8 @@ traefik-cluster-2:
   ports:
     web:
       port: 80
-    # websecure:
-    #   port: 443
-    # metrics:
-    #   port: 19100
   additionalArguments:
     - "--serversTransport.insecureSkipVerify=true"
-    # - "--entryPoints.web.address=:80"
-    # - "--entryPoints.web.forwardedHeaders.insecure"
-    # - "--entryPoints.web.proxyProtocol.insecure"
     - "--entryPoints.web.forwardedHeaders.trustedIPs=192.168.31.0/24"
     - "--entryPoints.web.proxyProtocol.trustedIPs=192.168.31.0/24"
   ingressClass:
@@ -31,13 +24,6 @@ traefik-cluster-2:
     access:
       enabled: true
   hostNetwork: false
-  # image:
-  #   name: andreydockerhub/app
-  #   tag: traefik_2.9.4
-  # updateStrategy:
-  #   rollingUpdate:
-  #     maxUnavailable: 1
-  #     maxSurge: 0
   rollingUpdate:
     maxUnavailable: 1
     maxSurge: 0

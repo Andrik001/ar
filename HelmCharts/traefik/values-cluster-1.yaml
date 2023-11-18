@@ -2,7 +2,7 @@
 tags:
   cluster-1: true
   cluster-2: false
-  
+
 traefik-cluster-1:
   deployment:
     kind: DaemonSet
@@ -13,8 +13,6 @@ traefik-cluster-1:
       port: 80
     websecure:
       port: 443
-    # metrics:
-    #   port: 19100
   additionalArguments:
     - "--serversTransport.insecureSkipVerify=true"
   ingressClass:
@@ -26,13 +24,6 @@ traefik-cluster-1:
     access:
       enabled: false
   hostNetwork: true
-  # image:
-  #   name: andreydockerhub/app
-  #   tag: traefik_2.9.4
-  # updateStrategy:
-  #   rollingUpdate:
-  #     maxUnavailable: 1
-  #     maxSurge: 0
   rollingUpdate:
     maxUnavailable: 1
     maxSurge: 0
