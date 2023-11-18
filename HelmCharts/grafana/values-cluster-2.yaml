@@ -5,6 +5,6 @@ grafana:
     port: 90
     targetPort: 3000
 
-subchart2:
-  enabled: true
+  subchart2:
+    enabled: true
 
