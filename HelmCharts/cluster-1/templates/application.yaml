@@ -10,7 +10,8 @@ spec:
     path: HelmCharts/{{ .Values.helm.applications }}
     targetRevision: HEAD
     helm:
-      valueFiles: |-
+      valueFiles: 
+        |-
         {{- range .Values.valueFiles }}
         - {{ . | title | quote }}
         {{- end }}
