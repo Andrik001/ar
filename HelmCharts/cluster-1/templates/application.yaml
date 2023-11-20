@@ -10,8 +10,8 @@ spec:
     repoURL: 'git@github.com:Andrik001/ar.git'
     path: HelmCharts/{{ . | print }}
     targetRevision: HEAD
-    helm:
-      valueFiles: [values-cluster-1.yaml]
+    # helm:
+    #   valueFiles: [values-cluster-1.yaml]
   destination:
     name: cluster-1
     namespace: {{ . | print }}
