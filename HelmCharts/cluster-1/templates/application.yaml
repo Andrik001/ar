@@ -17,7 +17,7 @@ spec:
         {{- end }}
   destination:
     name: cluster-1
-    namespace: {{ .helm.applications }}
+    namespace: {{ . | print }}
   syncPolicy:
     automated: {}
     syncOptions:
