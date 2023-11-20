@@ -8,3 +8,4 @@ grafana-cluster-1:
     type: NodePort
     port: 88
     targetPort: 3000
+    
