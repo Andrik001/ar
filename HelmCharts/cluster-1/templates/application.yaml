@@ -11,7 +11,8 @@ spec:
     targetRevision: HEAD
     helm:
       valueFiles: 
-        - {{ .Values.cluster1.helm.valueFiles }}    
+        - values-cluster-2.yaml
+        # - {{ .Values.cluster1.helm.valueFiles }}    
   destination:
     name: cluster-1
     namespace: grafana
