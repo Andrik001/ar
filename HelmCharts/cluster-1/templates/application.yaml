@@ -10,8 +10,7 @@ spec:
     path: HelmCharts/{{ .Values.helm.applications }}
     targetRevision: HEAD
     helm:
-      valueFiles: 
-        - {{ .Values.helm.applications.valueFiles }}
+      valueFiles: {{ .Values.helm.applications.valueFiles }}
   destination:
     name: cluster-1
     namespace: {{ .Values.helm.applications }}
