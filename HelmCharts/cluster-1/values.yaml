@@ -1,8 +1,6 @@
 helm:
   applications: grafana
-  valueFiles: 
-    - values-cluster-1.yaml
 destination:
   name: cluster-1
-
-
+valueFiles: 
+  - values-cluster-1.yaml
