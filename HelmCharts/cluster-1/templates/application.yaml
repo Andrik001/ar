@@ -12,9 +12,10 @@ spec:
     targetRevision: HEAD
     helm:
       valueFiles: 
-        {{- range .valueFiles }}
-        - {{ . | print | quote }}
-        {{- end }}
+        - values-cluster-1.yaml
+        # {{- range .valueFiles }}
+        # - {{ . | print | quote }}
+        # {{- end }}
   destination:
     name: cluster-1
     namespace: {{ . | print }}
