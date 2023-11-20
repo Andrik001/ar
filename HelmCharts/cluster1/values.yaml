@@ -1,4 +1,4 @@
-cluster-1:
+cluster1:
   helm:
     applications: grafana
     valueFiles: values-cluster-1.yaml
