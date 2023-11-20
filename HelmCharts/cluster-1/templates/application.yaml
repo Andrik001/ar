@@ -11,7 +11,7 @@ spec:
     targetRevision: HEAD
     helm:
       valueFiles: 
-        - values-cluster-2.yaml
+        - values-cluster-1.yaml
         # - {{ .Values.cluster1.helm.valueFiles }}    
   destination:
     name: cluster-1
