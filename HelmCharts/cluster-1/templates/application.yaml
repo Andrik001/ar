@@ -10,12 +10,10 @@ spec:
     path: HelmCharts/{{ .Values.helm.applications }}
     targetRevision: HEAD
     helm:
-      valueFiles:
-        - values-cluster-1.yaml
-      # valueFiles: |-
-      #   {{- range .Values.valueFiles }}
-      #   - {{ . | title | quote }}
-      #   {{- end }}
+      valueFiles: |-
+        {{- range .Values.valueFiles }}
+        - {{ . | title | quote }}
+        {{- end }}
   destination:
     name: cluster-1
     namespace: {{ .Values.helm.applications }}
