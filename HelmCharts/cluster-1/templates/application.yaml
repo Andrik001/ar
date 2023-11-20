@@ -13,9 +13,6 @@ spec:
     helm:
       valueFiles: 
         - values-cluster-1.yaml
-        # {{- range .valueFiles }}
-        # - {{ . | print | quote }}
-        # {{- end }}
   destination:
     name: cluster-1
     namespace: {{ . | print }}
@@ -24,3 +21,9 @@ spec:
     syncOptions:
       - CreateNamespace=true
 {{- end }}
+
+
+
+        # {{- range .valueFiles }}
+        # - {{ . | print | quote }}
+        # {{- end }}
