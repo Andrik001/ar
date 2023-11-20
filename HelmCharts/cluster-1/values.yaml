@@ -1,6 +1,16 @@
-helm:
-  applications: grafana
-destination:
-  name: cluster-1
-valueFiles: 
-  - values-cluster-1.yaml
+app:
+  - grafana:
+      helm:
+        applications: grafana
+      destination:
+        name: cluster-1
+      valueFiles: 
+        - values-cluster-1.yaml
+
+  - traefik:
+      helm:
+        applications: traefik
+      destination:
+        name: cluster-1
+      valueFiles: 
+        - values-cluster-1.yaml

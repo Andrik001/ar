@@ -1,3 +1,4 @@
+{{- range .Values.app }}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -7,17 +8,18 @@ spec:
   project: default
   source:
     repoURL: 'git@github.com:Andrik001/ar.git'
-    path: HelmCharts/{{ .Values.helm.applications }}
+    path: HelmCharts/{{ .helm.applications }}
     targetRevision: HEAD
     helm:
       valueFiles: 
-        {{- range .Values.valueFiles }}
+        {{- range .valueFiles }}
         - {{ . | print | quote }}
         {{- end }}
   destination:
     name: cluster-1
-    namespace: {{ .Values.helm.applications }}
+    namespace: {{ .helm.applications }}
   syncPolicy:
     automated: {}
     syncOptions:
       - CreateNamespace=true
+{{- end }}
