@@ -11,7 +11,7 @@ spec:
     targetRevision: HEAD
     helm:
       valueFiles: |-
-        {{- range .Values.helm.applications.valueFiles }}
+        {{- range .Values.helm.valueFiles }}
         - {{ . | title | quote }}
         {{- end }}  
   destination:
