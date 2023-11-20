@@ -3,4 +3,4 @@ helm:
 destination:
   name: cluster-1
 valueFiles: 
-  - 'values-cluster-1.yaml'
+  - "values-cluster-1.yaml"
