@@ -11,9 +11,9 @@ spec:
     targetRevision: HEAD
     helm:
       valueFiles: |-
-    {{- range .Values.helm.applications.valueFiles }}
-    - {{ . | title | quote }}
-    {{- end }}  
+        {{- range .Values.helm.applications.valueFiles }}
+        - {{ . | title | quote }}
+        {{- end }}  
   destination:
     name: cluster-1
     namespace: {{ .Values.helm.applications }}
