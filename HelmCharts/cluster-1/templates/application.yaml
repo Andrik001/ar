@@ -7,14 +7,14 @@ spec:
   project: default
   source:
     repoURL: 'git@github.com:Andrik001/ar.git'
-    path: HelmCharts/{{ .Values.helm.applications}}
+    path: HelmCharts/{{ .Values.helm.applications }}
     targetRevision: HEAD
     helm:
       valueFiles: 
-        - values-cluster-1.yaml 
+        - {{ .Values.helm.applications.valueFiles }}
   destination:
     name: cluster-1
-    namespace: grafana
+    namespace: {{ .Values.helm.applications }}
   syncPolicy:
     automated: {}
     syncOptions:
