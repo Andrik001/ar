@@ -12,7 +12,7 @@ spec:
     helm:
       valueFiles: 
         {{- range .Values.valueFiles }}
-        - {{ . | upper | quote }}
+        - {{ . | println | quote }}
         {{- end }}
   destination:
     name: cluster-1
