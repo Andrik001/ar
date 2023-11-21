@@ -20,7 +20,7 @@ spec:
       source:
         repoURL: git@github.com:Andrik001/ar.git
         targetRevision: HEAD
-        path: 'HelmCharts/default'
+        path: 'charts/default'
       destination:
         server: '{{url}}'
         namespace: argocd

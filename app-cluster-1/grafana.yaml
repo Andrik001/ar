@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: 'git@github.com:Andrik001/ar.git'
-    path: HelmCharts/grafana
+    path: charts/grafana
     targetRevision: main
     helm:
       valueFiles:

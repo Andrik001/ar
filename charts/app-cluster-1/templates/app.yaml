@@ -2,14 +2,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: {{ $appName }}
+  name: {{ $app.helm.applications }}
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: 'git@github.com:Andrik001/ar.git'
-    path: HelmCharts/{{ $app.helm.applications }}
-    targetRevision: HEAD
+    path: charts/{{ $appName }}
+    targetRevision: main
     helm:
       valueFiles:
         {{- range $app.valueFiles }}
