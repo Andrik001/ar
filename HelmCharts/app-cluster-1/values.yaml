@@ -1,7 +1,7 @@
 apps:
   grafana:
     helm:
-      applications: grafana
+      applications: grafana-cluster-1
     destination:
       name: cluster-1
     valueFiles: 
@@ -9,7 +9,7 @@ apps:
 
   traefik:
     helm:
-      applications: traefik
+      applications: traefik-cluster-1
     destination:
       name: cluster-1
     valueFiles: 
