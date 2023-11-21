@@ -7,10 +7,10 @@ apps:
     valueFiles: 
        - values-cluster-1.yaml
 
-  # traefik:
-  #   helm:
-  #     applications: traefik-cluster-1
-  #   destination:
-  #     name: cluster-1
-  #   valueFiles: 
-  #     - values-cluster-1.yaml
+  traefik:
+    helm:
+      applications: traefik-cluster-1
+    destination:
+      name: cluster-1
+    valueFiles: 
+      - values-cluster-1.yaml
