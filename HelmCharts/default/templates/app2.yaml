@@ -1,8 +1,8 @@
-{{- range .Values.app := $app }}
+{{- range $appName, $app := .Values.apps2 }}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: grafana-cluster-1
+  name: {{ $appName }}
   namespace: argocd
 spec:
   project: default
@@ -12,13 +12,12 @@ spec:
     targetRevision: HEAD
     helm:
       valueFiles:
-         - values-cluster-1.yaml
-        # {{- range .Values.grafana.valueFiles }}
-        # - {{ . | print | quote }}
-        # {{- end }}
+        {{- range $app.valueFiles }}
+        - {{ . }}
+        {{- end }}
   destination:
-    name: cluster-1
-    namespace: {{ $app.helm.applications }}
+    name: {{ $app.destination.name }}
+    namespace: {{ $appName }}
   syncPolicy:
     automated: {}
     syncOptions:
