@@ -1,25 +1,25 @@
-{{- range $appName, $app := .Values.apps2 }}
+{{- range $i, $val := .Values.apps }}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: {{ $appName }}
+  name: {{ $i }}
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: 'git@github.com:Andrik001/ar.git'
-    path: HelmCharts/{{ $app.helm.applications }}
+    path: HelmCharts/{{ $i }}
     targetRevision: HEAD
     helm:
       valueFiles:
-        {{- range $app.valueFiles }}
+        {{- range $val.valueFiles }}
         - {{ . }}
-        {{- end }}
+        {{ end -}}
   destination:
-    name: {{ $app.destination.name }}
-    namespace: {{ $appName }}
-  syncPolicy: 
+    name: cluster-1
+    namespace: {{ $i }}
+  syncPolicy:
     automated: {}
     syncOptions:
       - CreateNamespace=true
-{{- end }}
+{{ end -}}

@@ -1,18 +1,43 @@
+---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: main-app-cluster-1
   namespace: argocd
 spec:
-  destination:
-    name: cluster-1
-    namespace: argocd
   project: default
   source:
-    path: cluster-1/applications
     repoURL: git@github.com:Andrik001/ar.git
     targetRevision: HEAD
+    path: app-cluster-2
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
   syncPolicy:
-    automated: {}
+    automated:
+      prune: true
+      selfHeal: true
     syncOptions:
+      - Validate=false
       - CreateNamespace=true
+
+
+
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   name: main-app-cluster-1
+#   namespace: argocd
+# spec:
+#   destination:
+#     name: cluster-1
+#     namespace: argocd
+#   project: default
+#   source:
+#     path: app-cluster-1
+#     repoURL: git@github.com:Andrik001/ar.git
+#     targetRevision: HEAD
+#   syncPolicy:
+#     automated: {}
+#     syncOptions:
+#       - CreateNamespace=true
