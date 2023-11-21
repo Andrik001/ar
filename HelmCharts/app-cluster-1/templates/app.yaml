@@ -8,7 +8,7 @@ spec:
   project: default
   source:
     repoURL: 'git@github.com:Andrik001/ar.git'
-    path: HelmCharts/{{ $app.helm.applications }}
+    path: HelmCharts/{{ $appName }}
     targetRevision: HEAD
     helm:
       valueFiles:
