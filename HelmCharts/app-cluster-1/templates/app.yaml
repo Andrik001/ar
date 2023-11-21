@@ -1,4 +1,4 @@
-{{- range $appName, $app := .Values.apps2 }}
+{{- range $appName, $app := .Values.apps }}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -18,7 +18,7 @@ spec:
   destination:
     name: {{ $app.destination.name }}
     namespace: {{ $appName }}
-  syncPolicy: 
+  syncPolicy:
     automated: {}
     syncOptions:
       - CreateNamespace=true
