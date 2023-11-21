@@ -8,7 +8,7 @@ spec:
   project: default
   source:
     repoURL: git@github.com:Andrik001/ar.git
-    targetRevision: HEAD
+    targetRevision: main
     path: app-cluster-1
   destination:
     server: https://kubernetes.default.svc
