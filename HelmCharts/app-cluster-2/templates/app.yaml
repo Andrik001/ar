@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: 'git@github.com:Andrik001/ar.git'
     path: HelmCharts/{{ $appName }}
-    targetRevision: HEAD
+    targetRevision: main
     helm:
       valueFiles:
         {{- range $app.valueFiles }}
