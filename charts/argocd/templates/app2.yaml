@@ -1,0 +1,28 @@
+{{- if .Values.cluster2.enable -}}
+{{- range $appName, $app := .Values.cluster2.apps }}
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: {{ $app.helm.applications }}
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'git@github.com:Andrik001/ar.git'
+    path: charts/{{ $appName }}
+    targetRevision: main
+    helm:
+      valueFiles:
+        {{- range $app.valueFiles }}
+        - {{ . }}
+        {{- end }}
+  destination:
+    name: {{ $app.destination.name }}
+    namespace: {{ $appName }}
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true
+---
+{{- end }}
+{{- end -}}

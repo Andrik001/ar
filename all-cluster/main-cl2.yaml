@@ -9,10 +9,14 @@ spec:
   source:
     repoURL: git@github.com:Andrik001/ar.git
     targetRevision: main
-    path: 'charts/app-cluster-2'
+    path: 'charts/argocd'
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
+    helm:
+      valuesObject:
+        cluster2:
+          enabled: true
   syncPolicy:
     automated:
       prune: true

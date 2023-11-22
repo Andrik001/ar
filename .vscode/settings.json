@@ -1,0 +1,8 @@
+{
+    "helm-intellisense.customValueFileNames": [
+
+        "values-cluster-1",
+        "values-cluster-2",
+        "values.yaml"
+    ]
+}

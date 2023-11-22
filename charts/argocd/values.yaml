@@ -1,0 +1,37 @@
+cluster1:
+  enable: false
+  apps:
+    grafana:
+      helm:
+        applications: grafana-cluster-1
+      destination:
+        name: cluster-1
+      valueFiles: 
+        - values-cluster-1.yaml
+
+    traefik:
+      helm:
+        applications: traefik-cluster-1
+      destination:
+        name: cluster-1
+      valueFiles: 
+        - values-cluster-1.yaml
+        
+cluster2:
+  enable: false
+  apps:
+    grafana:
+      helm:
+        applications: grafana-cluster-2
+      destination:
+        name: cluster-2
+      valueFiles: 
+        - values-cluster-2.yaml
+
+    traefik:
+      helm:
+        applications: traefik-cluster-2
+      destination:
+        name: cluster-2
+      valueFiles: 
+        - values-cluster-2.yaml
