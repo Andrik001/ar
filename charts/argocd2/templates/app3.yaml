@@ -1,0 +1,36 @@
+{{- define "argocd.app" -}}
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: {{ .helm.applications }}
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'git@github.com:Andrik001/ar.git'
+    path: charts/{{ .namespace }}
+    targetRevision: main
+    helm:
+      valueFiles:
+        {{- range .valueFiles }}
+        - {{ . }}
+        {{- end }}
+  destination:
+    name: {{ .destination.name }}
+    namespace: {{ .name }}
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true
+---
+{{- end -}}
+
+{{- if eq .Values.cluster1.tag "cluster1" }}
+{{- range $appName, $app := .Values.cluster1.apps }}
+{{ template "argocd.app" . }}
+{{- end }}
+{{- else if eq .Values.cluster2.tag "cluster2" }}
+{{- range $appName, $app := .Values.cluster2.apps }}
+{{ template "argocd.app" . }}
+{{- end }}
+{{- end -}}

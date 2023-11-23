@@ -1,5 +1,5 @@
-{{ $cluster := .Values.tags }}
-{{- range $appName, $app := $cluster.apps }}
+{{- define "argo.app" }}
+{{- range $appName, $app := .Values.cluster1.apps -}}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -25,3 +25,10 @@ spec:
       - CreateNamespace=true
 ---
 {{- end }}
+{{- end }}
+
+
+{{ template "argo.app" }}
+
+
+

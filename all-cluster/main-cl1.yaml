@@ -9,10 +9,10 @@ spec:
   source:
     repoURL: git@github.com:Andrik001/ar.git
     targetRevision: main
-    path: 'charts/argocd'
+    path: 'charts/argocd2'
     helm:
       parameters:
-        - name: "tags"
+        - name: "tag"
           value: "cluster1"
   destination:
     server: https://kubernetes.default.svc
