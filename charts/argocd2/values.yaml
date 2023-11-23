@@ -11,7 +11,7 @@ cluster1:
         - values-cluster-1.yaml
 
     traefik:
-      namespcae: traefik
+      namespace: traefik
       helm:
         applications: traefik-cluster-1
       destination:
@@ -32,7 +32,7 @@ cluster2:
         - values-cluster-2.yaml
 
     traefik:
-      namespcae: traefik
+      namespace: traefik
       helm:
         applications: traefik-cluster-2
       destination:
