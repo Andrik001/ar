@@ -17,7 +17,7 @@ spec:
         {{- end }}
   destination:
     name: {{ .destination.name }}
-    namespace: {{ .name }}
+    namespace: {{ .namespace }}
   syncPolicy:
     automated: {}
     syncOptions:
