@@ -1,5 +1,5 @@
-{{- if .Values.cluster1.enable -}}
-{{- range $appName, $app := .Values.cluster1.apps }}
+{{ $cluster := .Values.tags }}
+{{- range $appName, $app := .Values.tags.apps }}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -25,4 +25,3 @@ spec:
       - CreateNamespace=true
 ---
 {{- end }}
-{{- end -}}
