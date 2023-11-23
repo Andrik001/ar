@@ -1,5 +1,5 @@
 {{ $cluster := .Values.tags }}
-{{- range $appName, $app := $cluster.apps }}
+{{- range $appName, $app := .Values.$cluster.apps }}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
