@@ -24,13 +24,3 @@ spec:
       - CreateNamespace=true
 ---
 {{- end -}}
-
-{{- if eq .Values.cluster1.tag "cluster1" }}
-{{- range $appName, $app := .Values.cluster1.apps }}
-{{ template "argocd.app" . }}
-{{- end }}
-{{- else if eq .Values.cluster2.tag "cluster2" }}
-{{- range $appName, $app := .Values.cluster2.apps }}
-{{ template "argocd.app" . }}
-{{- end }}
-{{- end -}}
