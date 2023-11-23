@@ -1,5 +1,5 @@
 cluster1:
-  tag: cluster
+  tag:
   apps:
     grafana:
       namespace: grafana
@@ -20,7 +20,7 @@ cluster1:
         - values-cluster-1.yaml
         
 cluster2:
-  tag: cluster
+  tag:
   apps:
     grafana:
       namespace: grafana
